@@ -7,12 +7,19 @@ If the back_test is False in the configs file, data will be retrieved until the 
 
 Example taken on 24.03.2022:
 >{"1w": {"calculate": False, "check_signal": None},
+>
 >"1d": {"calculate": True, "check_signal": None},
+>
 >"12h": {"calculate": False, "check_signal": None},
+>
 >...
+>
 >...
+>
 >"5m": {"calculate": True, "check_signal": None},
+>
 >"1m": {"calculate": False, "check_signal": None},
+>
 >}
 
 Last part of 1-day data: 23.03.2022 00:00:00

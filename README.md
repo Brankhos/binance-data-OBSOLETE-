@@ -1,4 +1,6 @@
 # Get Kli
+**Many features have been removed in the shared version, leaving only the base.**
+
 Saves the last 9 weeks of data to the database via binance
 
 Which periods to save can be selected via the configs file (calculate)
@@ -53,4 +55,3 @@ back_test = False
 >>
 >>Last part of 5-minute data: 24.03.2022 05:05:00
 
-**Many features have been removed in the shared version, leaving only the base.**

@@ -261,11 +261,10 @@ async def coin_calculator(symbol_name, cursor,  session, periods, weight):
             last_cur_time = cur_time - diviner
 
             if configs.back_test is True and resp[-1][0] == last_cur_time:
-                #print("kırıldı 1")
                 resp = resp[:-1]
             if len(resp) == 0:
-                #print("kırıldı 2")
                 break
+                
             add_coindata = (
                 "INSERT INTO {} (open_time, open, high, low, close, volume, close_time, quote_asset_volume, number_of_trades, taker_buy_base_asset_volume, taker_buy_quote_asset_volume, ignore_it) "
                 "VALUES ".format(symbol_name))
@@ -275,14 +274,14 @@ async def coin_calculator(symbol_name, cursor,  session, periods, weight):
             cursor.execute(add_coindata_t)
             last_open = int(resp[-1][6]) + 1
 
-            """
+            
             if configs.back_test is False and last_open > cur_time:
-                print("kırıldı 3")
+                break
 
             elif configs.stop_day is not None and last_open >= configs.stop_day + 1:
-                print("kırıldı 4")
-            """
             break
+            
+                
 
     pass
 
@@ -360,8 +359,8 @@ def main():
         print(f"Güncellemeler tamamlandı. {wait_time} saniye sonra işlemlere başlanacak.")
         print(int((wait_time / 60) / 60) % 60, "Saat", int(wait_time / 60) % 60, "Dakika", wait_time % 60, "Saniye")
         time.sleep(wait_time)
-        # per_cpu = int(len(coin_list) / cpu_count)
-        per_cpu = int(len(coin_list))
+        per_cpu = int(len(coin_list) / cpu_count)
+        #per_cpu = int(len(coin_list))
         cout = len(coin_list) % cpu_count
         task = []
         last_start = 0

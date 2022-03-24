@@ -13,7 +13,9 @@ Example taken on 24.03.2022:
 &nbsp;"5m": {"calculate": True, "check_signal": None},
 &nbsp;"1m": {"calculate": False, "check_signal": None},
 &nbsp;}
+
 Last part of 1-day data: 23.03.2022 00:00:00
+
 Last part of 5-minute data: 23.03.2022 23:55:00
 
 

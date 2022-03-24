@@ -53,4 +53,4 @@ back_test = False
 >>
 >>Last part of 5-minute data: 24.03.2022 05:05:00
 
-Many features have been removed in the shared version, leaving only the base.
+**Many features have been removed in the shared version, leaving only the base.**

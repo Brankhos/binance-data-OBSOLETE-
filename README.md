@@ -7,6 +7,8 @@ Which periods to save can be selected via the configs file (calculate)
 
 The backtest feature of the retrieved data has been deleted
 
+**need database to save datas. xampp, wamp etc.**
+
 If the back_test is False in the configs file, data will be retrieved until the current data. 
 
 If True, data will be captured until the last part of the data in the highest period.
